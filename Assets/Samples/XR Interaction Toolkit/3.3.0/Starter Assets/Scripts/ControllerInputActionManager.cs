@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Unity.XR.CoreUtils.Bindings;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -7,6 +9,8 @@ using UnityEngine.XR.Interaction.Toolkit.Attachment;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Readers;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 using UnityEngine.XR.Interaction.Toolkit.UI;
+using UnityEngine.XR.Interaction.Toolkit.Interactors.Visuals;
+using System.Collections.Specialized;
 
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 {
@@ -520,7 +524,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             action?.Disable();
         }
 
-        static InputAction GetInputAction(InputActionReference actionReference)
+        public static InputAction GetInputAction(InputActionReference actionReference)
         {
 #pragma warning disable IDE0031 // Use null propagation -- Do not use for UnityEngine.Object types
             return actionReference != null ? actionReference.action : null;
