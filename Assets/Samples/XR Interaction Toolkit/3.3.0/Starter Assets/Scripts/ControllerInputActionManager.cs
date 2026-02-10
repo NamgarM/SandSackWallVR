@@ -176,9 +176,9 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
             var moveAction = GetInputAction(m_Move);
             if (moveAction != null)
-            {
+            {/*
                 moveAction.started += OnStartLocomotion;
-                moveAction.canceled += OnStopLocomotion;
+                moveAction.canceled += OnStopLocomotion;*/
             }
 
             var turnAction = GetInputAction(m_Turn);
@@ -231,9 +231,9 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
             var moveAction = GetInputAction(m_Move);
             if (moveAction != null)
-            {
+            {/*
                 moveAction.started -= OnStartLocomotion;
-                moveAction.canceled -= OnStopLocomotion;
+                moveAction.canceled -= OnStopLocomotion; */
             }
 
             var turnAction = GetInputAction(m_Turn);
@@ -462,7 +462,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         void UpdateLocomotionActions()
         {
             // Disable/enable Teleport and Turn when Move is enabled/disabled.
-            SetEnabled(m_Move, m_SmoothMotionEnabled);
+            //SetEnabled(m_Move, m_SmoothMotionEnabled);
             SetEnabled(m_TeleportMode, !m_SmoothMotionEnabled);
             SetEnabled(m_TeleportModeCancel, !m_SmoothMotionEnabled);
 
@@ -479,7 +479,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
         void DisableMoveAndTurnActions()
         {
-            DisableAction(m_Move);
+            //DisableAction(m_Move);
             DisableAction(m_Turn);
             DisableAction(m_SnapTurn);
         }
